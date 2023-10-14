@@ -1,0 +1,40 @@
+@mixin heading-1 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 40px;
+    letter-spacing: 4.17px;
+    font-weight: 800;
+    line-height: 48px;
+}
+
+@mixin heading-2 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 24px;
+    letter-spacing: 0;
+    font-weight: 800;
+    line-height: 25px;
+}
+
+@mixin heading-3 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 18px;
+    letter-spacing: 0;
+    font-weight: 800;
+    line-height: 25px;
+}
+
+@mixin heading-4 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 12px;
+    letter-spacing: 2px;
+    font-weight: 800;
+    line-height: 16px;
+}
+
+@mixin body {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 15px;
+    letter-spacing: 0;
+    font-weight: 400;
+    line-height: 25px;
+}
+
