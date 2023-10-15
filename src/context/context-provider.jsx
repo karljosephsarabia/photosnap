@@ -7,6 +7,47 @@ export const Provider = (props) => {
 
     const category = ['home', 'stories', 'features', 'pricing'];
 
+    const banner = [{
+        title: "Create and share your photo Stories",
+        overview: "Photosnap is a platform for photographers and visual storytellers. We make it easy to share photos, tell stories and connect with others.",
+        image: "/assets/home/mobile/create-and-share.jpg",
+        "slug-title": "create-and-share",
+        cta: "get an invite",
+        category: 'home',
+        highlight: [{
+            title: "Beautiful stories every time",
+            overview: "We provide design templates to ensure your stories look terrific. Easily add photos, text, embed maps and media from other networks.",
+            image: "/assets/home/mobile/beautiful-stories.jpg",
+            "slug-title": "beautiful-stories",
+            cta: "view the stories"
+        },
+        {
+            title: "Designed for everyone",
+            overview: "Photosnap can help you create stories that resonate with your audience. Our tool is designed for photographers of all levels, brands, businesses you name it.",
+            image: "/assets/home/mobile/designed-for-everyone.jpg",
+            "slug-title": "",
+            cta: "view the stories"
+        }]
+    },
+    {
+        title: "Features",
+        overview: "We make sure all of our features are designed to be loved by every aspiring and even professional photograpers who wanted to share their stories.",
+        image: "/assets/features/mobile/hero.jpg",
+        "slug-title": "hero",
+        cta: "",
+        category: 'features',
+        highlight: []
+    },
+    {
+        title: "Pricing",
+        overview: "Create a your stories, Photosnap is a platform for photographers and visual storytellers. It’s the simple way to create and share your photos.",
+        image: "/assets/pricing/mobile/hero.jpg",
+        "slug-title": "hero",
+        cta: "",
+        category: "pricing",
+        highlight: []
+    }];
+
     const stories = [{
         title: "Hazy full moon of Appalachia",
         'sub-title': "Last month's featured story",
@@ -217,7 +258,7 @@ export const Provider = (props) => {
 
     return (
         <>
-            <PhotoSnapContext.Provider value={{ category, socialMedia, stories }}>
+            <PhotoSnapContext.Provider value={{ category, socialMedia, stories, banner }}>
                 {props.children}
             </PhotoSnapContext.Provider>
         </>
