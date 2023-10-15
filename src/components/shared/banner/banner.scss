@@ -1,0 +1,111 @@
+
+@use '../../../styling/global' as styling;
+
+
+.main-article-v1 {
+    img {
+        @include styling.container;
+        width: 375.2px;
+    }
+
+    &__overview {
+        @include styling.container;
+        background-color: map-get(styling.$color , 'pure black');
+        color: map-get(styling.$color , 'pure white');
+        padding-bottom: 75px;
+        width: 375.2px;
+
+
+        h1 {
+            @include styling.container;
+            @include styling.heading-1;
+            font-size: 34px;
+            text-transform: uppercase;
+            position: relative;
+            padding-top: 75px;
+
+            &::before {
+                content: ' ';
+                border-top: solid 5px;
+                border-image: linear-gradient(3deg, rgba(255, 197, 147, 1) 28%, rgba(188, 113, 152, 1) 51%, rgba(90, 119, 255, 1) 100%) 1;
+                position: absolute;
+                top: 0;
+                width: 135px;
+            }
+        }
+
+        p {
+            @include styling.container;
+            @include styling.body;
+            font-size: 16px;
+            color: grey;
+            padding: 20px 0;
+        }
+
+        a {
+            @include styling.container;
+            @include styling.heading-4;
+            font-size: 13px;
+            text-decoration: none;
+            color: map-get(styling.$color, 'pure white');
+            text-transform: uppercase;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+
+            img {
+                filter: brightness(0) invert(1);
+                width: 43px;
+                height: 14px;
+            }
+        }
+    }
+}
+
+.main-article-v2 {
+
+    img {
+        @include styling.container;
+        width: 375.2px;
+    }
+
+    &__overview {
+        color: map-get(styling.$color , 'pure black');
+        padding-bottom: 75px;
+
+        h1 {
+            @include styling.container;
+            @include styling.heading-1;
+            font-size: 34px;
+            text-transform: uppercase;
+            position: relative;
+            padding-top: 75px;
+            padding-right: 31px;
+        }
+
+        p {
+            @include styling.container;
+            @include styling.body;
+            font-size: 16px;
+            color: grey;
+            padding: 20px 0;
+        }
+
+        a {
+            @include styling.container;
+            @include styling.heading-4;
+            font-size: 13px;
+            text-decoration: none;
+            color: map-get(styling.$color, 'pure black');
+            text-transform: uppercase;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+
+            img {
+                width: 43px;
+                height: 14px;
+            }
+        }
+    }
+}
