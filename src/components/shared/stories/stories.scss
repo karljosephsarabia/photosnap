@@ -1,0 +1,56 @@
+@use '../../../styling/global' as styling;
+
+.section-container-mid {
+    @include styling.container;
+    width: 375.2px;
+    position: relative;
+
+    img {
+        filter: brightness(0.75) contrast(1.2);
+    }
+
+    &__info {
+        @include styling.container;
+        position: absolute;
+        bottom: 0;
+        transform: translate(7%, -50%);
+
+        p {
+            @include styling.heading-4;
+            color: map-get(styling.$color, 'pure white');
+            display: flex;
+            flex-direction: column;
+            letter-spacing: 0;
+            font-weight: 300;
+            font-size: 13px;
+
+            span {
+                @include styling.heading-3;
+                text-transform: capitalize;
+            }
+        }
+
+        hr {
+            margin: 18px 0;
+            border: solid white 1px;
+            opacity: 0.4;
+        }
+
+        a {
+            @include styling.container;
+            @include styling.heading-4;
+            font-size: 13px;
+            text-decoration: none;
+            color: map-get(styling.$color, 'pure white');
+            text-transform: uppercase;
+            display: flex;
+            justify-content: space-between;
+
+            img {
+                filter: brightness(0) invert(1);
+                width: 43px;
+                height: 14px;
+            }
+        }
+    }
+}
